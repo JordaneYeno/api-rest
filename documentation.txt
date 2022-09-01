@@ -1,0 +1,52 @@
+Pour voir tous le contenue de la table chaussures
+
+/api/chaussures/all
+
+
+Pour afficher l'élément dont l'id est égale à 1
+
+/api/chaussures/1
+
+
+Pour ajouter une line de donner
+
+/api/chaussures/add
+
+
+Pour modifier la line de donner dont l'id est égale à 1
+
+/api/chaussures/update/1
+
+
+Pour supprimer la line de donner dont l'id est égale à 1
+
+/api/chaussures/delete/1
+
+
+
+
+
+
+Pour voir tous le contenue de la table marques
+
+/api/marques/all
+
+
+Pour afficher l'élément dont l'id est égale à 1
+
+/api/marques/1
+
+
+Pour ajouter une line de donner
+
+/api/marques/add
+
+
+Pour modifier la line de donner dont l'id est égale à 1
+
+/api/marques/update/1
+
+
+Pour supprimer la line de donner dont l'id est égale à 1
+
+/api/marques/delete/1

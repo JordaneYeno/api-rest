@@ -1,0 +1,17 @@
+{
+    "name": "api/slim3",
+    "autoload": {
+        "psr-4": {
+            "Api\\Slim3\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "jhonn-jordan",
+            "email": "adembigondjo@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.12"
+    }
+}
