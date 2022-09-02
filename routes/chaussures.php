@@ -4,6 +4,10 @@ use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
 
+// Pour voir tous le contenue de la table chaussures
+
+// /api/chaussures/all
+
 $app->get('/api/chaussures/all', function (Request $request, Response $response) {
  
     $sql = "SELECT * FROM chaussures";
@@ -35,6 +39,10 @@ $app->get('/api/chaussures/all', function (Request $request, Response $response)
 
 });
 
+
+// Pour ajouter une line de donner
+
+// /api/chaussures/add
 
 $app->post('/api/chaussures/add', function (Request $request, Response $response, array $args) {
     $idMarque = $request->getParam('idxMarque');
@@ -77,6 +85,10 @@ $app->post('/api/chaussures/add', function (Request $request, Response $response
 
 });
 
+
+// Pour modifier la line de donner dont l'id est égale à 1
+
+// /api/chaussures/update/1
 
 $app->put('/api/chaussures/update/{id}', function (Request $request, Response $response, array $args) {
 
@@ -127,6 +139,10 @@ $app->put('/api/chaussures/update/{id}', function (Request $request, Response $r
 });
 
 
+// Pour supprimer la line de donner dont l'id est égale à 1
+
+// /api/chaussures/delete/1
+
 $app->delete('/api/chaussures/delete/{id}', function (Request $request, Response $response, array $args) {
 
     $id = $request->getAttribute('id');
@@ -161,6 +177,11 @@ $app->delete('/api/chaussures/delete/{id}', function (Request $request, Response
 
 });
 
+
+
+// Pour afficher l'élément dont l'id est égale à 1
+
+// /api/chaussures/1
 
 $app->get('/api/chaussures/{id}', function (Request $request, Response $response, array $args) {
 

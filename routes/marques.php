@@ -4,6 +4,11 @@ use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
 
+
+// Pour voir tous le contenue de la table marques
+
+// /api/marques/all
+
 $app->get('/api/marques/all', function (Request $request, Response $response) {
  
     $sql = "SELECT * FROM marques";
@@ -35,6 +40,10 @@ $app->get('/api/marques/all', function (Request $request, Response $response) {
 
 });
 
+
+// Pour ajouter une line de donner
+
+// /api/marques/add
 
 $app->post('/api/marques/add', function (Request $request, Response $response, array $args) {
     $marque = $request->getParam('marque');
@@ -74,6 +83,10 @@ $app->post('/api/marques/add', function (Request $request, Response $response, a
 
 });
 
+
+// Pour modifier la line de donner dont l'id est égale à 1
+
+// /api/marques/update/1
 
 $app->put('/api/marques/update/{id}', function (Request $request, Response $response, array $args) {
 
@@ -115,6 +128,10 @@ $app->put('/api/marques/update/{id}', function (Request $request, Response $resp
 });
 
 
+// Pour supprimer la line de donner dont l'id est égale à 1
+
+// /api/marques/delete/1
+
 $app->delete('/api/marques/delete/{id}', function (Request $request, Response $response, array $args) {
 
     $id = $request->getAttribute('id');
@@ -149,6 +166,10 @@ $app->delete('/api/marques/delete/{id}', function (Request $request, Response $r
 
 });
 
+
+// Pour afficher l'élément dont l'id est égale à 1
+
+// /api/marques/1
 
 $app->get('/api/marques/{id}', function (Request $request, Response $response, array $args) {
 
